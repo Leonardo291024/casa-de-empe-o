@@ -1,0 +1,14 @@
+.container_logos-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 20px;
+}
+
+.container_logos-header .logo__principal{
+    width: 100px;
+}
+
+.container_logos-header .logo__menu{
+    width: 35px;
+    justify-self: end;
+}
