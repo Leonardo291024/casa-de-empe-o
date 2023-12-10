@@ -11,7 +11,14 @@ footer{
 }
 
 .item__footer a{
-    display: block;
+    display: inline-block;
     color: orangered;
     margin-bottom: 10px;
 }
+
+@media screen and (min-width: 600px) {
+    footer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+

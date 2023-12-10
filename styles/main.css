@@ -11,6 +11,11 @@ main{
     margin-bottom: 15px;
 }
 
+.container__inputs{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 .container__inputs select, input{
     display: block;
     width: 100%;
@@ -30,4 +35,16 @@ main{
     border: none;
     color: black;
     background-color: #FFEB3B;
+    cursor: pointer;
+}
+
+@media  screen and (min-width: 600px) {
+    .container__inputs{
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }   
+
+    .container__inputs select, input{
+        height: 45px;
+    }
 }

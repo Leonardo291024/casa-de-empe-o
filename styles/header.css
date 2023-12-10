@@ -1,3 +1,7 @@
+.container__menu-desktop{
+    display: none;
+}
+
 .container_logos-header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -11,4 +15,42 @@
 .container_logos-header .logo__menu{
     width: 35px;
     justify-self: end;
+}
+
+@media screen and (min-width: 720px){
+    .container_logos-header{
+        grid-template-columns: 1fr 5fr;
+    }
+
+   .container_logos-header .logo__menu{
+        display: none;
+   }
+
+   .container__menu-desktop{
+        display: block;
+   }
+
+   .container__menu-desktop ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90px;
+   }
+
+   .container__menu-desktop ul li{
+        margin-right: 30px;
+   }
+
+   .container__menu-desktop ul li a{
+        display: flex;
+        padding: 5px 5px;
+    
+   }
+
+   .container__menu-desktop ul li a:hover{
+        background: orangered;
+        align-items: center;
+        color: white;
+   }
 }
