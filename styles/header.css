@@ -4,7 +4,7 @@ header{
 
 .container__menu-mobile{
      position: absolute;
-     display: none;
+     display: grid;
      grid-template-columns: 5fr 1fr;
      background-color: #fcd14c;
      top: 0px;
