@@ -1,19 +1,21 @@
-function toggleMenu(){
-    let menu = document.getElementById('menu-mobile');
-    let menuIcon = document.querySelector('.logo__menu');
-    let closeIcon = document.querySelector('.close-icon');
+const menuIcon = document.getElementById('logo-menu');
+const closeIcon = document.getElementById('logo__close');
+const menu = document.getElementById('menu-mobile');
 
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
-    menuIcon.style.display = 'none'
-    closeIcon.style.display = 'block'
-}
+menuIcon.addEventListener('click', function(){
+    if(menu.style.display === "none" || menu.style.display === ""){
+        menu.style.display = "grid";
+        console.log("ABRE EL MENU")
+    }else{
+        menu.style.display = "none";
+    }
+});
 
-function closeMenu() {
-    var menu = document.querySelector('.mobile-menu');
-    var menuIcon = document.querySelector('.menu-icon');
-    var closeIcon = document.querySelector('.close-icon');
-  
-    menu.style.display = 'none';
-    menuIcon.style.display = 'block';
-    closeIcon.style.display = 'none';
-  }
+closeIcon.addEventListener('click', function(){
+    if(menu.style.display === "grid" || menu.style.display === ""){
+        menu.style.display = "none";
+        console.log("CIERRA EL MENU")
+    }else{
+        menu.style.display = "grid";
+    }
+})

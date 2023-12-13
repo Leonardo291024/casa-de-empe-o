@@ -2,6 +2,14 @@ header{
      position: relative;
 }
 
+.logo__menu, .close-icon{
+     cursor: pointer;
+}
+
+#menu-mobile{
+     display: none;
+}
+
 .container__menu-mobile{
      position: absolute;
      display: grid;
