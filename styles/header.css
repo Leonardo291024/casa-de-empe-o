@@ -99,12 +99,14 @@ header{
    .container__menu-desktop ul li a{
         display: flex;
         padding: 5px 5px;
-    
+        transition: 0.3s all;
    }
 
    .container__menu-desktop ul li a:hover{
         background: orangered;
         align-items: center;
         color: white;
+        border-radius: 8px;
+        transform: scale(1.2);
    }
 }
