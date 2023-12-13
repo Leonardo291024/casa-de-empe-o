@@ -39,6 +39,26 @@ main{
     cursor: pointer;
 }
 
+.container_cards-productos{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+
+.container_cards-productos article{
+    max-width: 320px;
+    margin-top: 15px;
+    background-color: #FFEB3B;
+}
+
+.container_cards-productos article img{
+    width: 100%;
+}
+
+.container_cards-productos .descripcion__producto{
+    padding: 10px 10px;
+}
+
 @media  screen and (min-width: 600px) {
     .container__inputs{
         grid-template-columns: 1fr 1fr;
@@ -47,5 +67,10 @@ main{
 
     .container__inputs select, input{
         height: 45px;
+    }
+
+    .container_cards-productos{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
     }
 }
