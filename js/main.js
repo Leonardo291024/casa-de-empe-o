@@ -1,12 +1,30 @@
 const detalleProducto = document.querySelector('.Detalle-product');
 const imgDetailProduct = document.getElementById('img-Detail-Product');
 const iconCloseDetailProduct = document.getElementById('Icon-Close-Detail-Product');
-
+const menuIcon = document.getElementById('logo-menu');
+const closeIcon = document.getElementById('logo__close');
+const menu = document.getElementById('menu-mobile');
 const containerCrdsProducts = document.querySelector('.container_cards-productos');
 
 iconCloseDetailProduct.addEventListener('click', closeDetailProduct);
 
-const productList = [];
+menuIcon.addEventListener('click', function(){
+    if(menu.style.display === "none" || menu.style.display === ""){
+        menu.style.display = "grid";
+        console.log("ABRE EL MENU")
+    }else{
+        menu.style.display = "none";
+    }
+});
+
+closeIcon.addEventListener('click', function(){
+    if(menu.style.display === "grid" || menu.style.display === ""){
+        menu.style.display = "none";
+        console.log("CIERRA EL MENU")
+    }else{
+        menu.style.display = "grid";
+    }
+});
 
 function openDetailProduct(){
     detalleProducto.classList.remove('inactive');
@@ -15,6 +33,8 @@ function openDetailProduct(){
 function closeDetailProduct(){
     detalleProducto.classList.add('inactive')
 }
+
+const productList = [];
 
 productList.push({
     image: "./images/imagen_cel_prueba.jpg",
@@ -106,13 +126,4 @@ function renderProducts(arr){
     }
 }
 
-renderProducts(productList)
-
-imgDetailProduct.addEventListener('click', function(){
-    if(detalleProducto.style.display === "none" || detalleProducto.style.display === ""){
-        detalleProducto.style.display = "block"
-        console.log("abre el detalle del producto")
-    }else{
-        detalleProducto.style.display = "none"
-    }
-})
+renderProducts(productList);
