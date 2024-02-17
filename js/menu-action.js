@@ -18,4 +18,5 @@ closeIcon.addEventListener('click', function(){
     }else{
         menu.style.display = "grid";
     }
-})
+});
+

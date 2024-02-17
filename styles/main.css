@@ -49,6 +49,14 @@ main{
     max-width: 320px;
     margin-top: 15px;
     background-color: #FFEB3B;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.container_cards-productos article .descripcion__producto div{
+    display: flex;
+    align-items: baseline;
 }
 
 .container_cards-productos article img{
@@ -60,6 +68,13 @@ main{
 }
 
 @media  screen and (min-width: 600px) {
+    .container_cards-productos{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media  screen and (min-width: 850px) {
     .container__inputs{
         grid-template-columns: 1fr 1fr;
         gap: 15px;
